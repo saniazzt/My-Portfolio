@@ -336,6 +336,10 @@ nav {
   text-align: left;
 }
 
+.text-container {
+    font-size: 1.2rem;
+}
+
 .about-layout {
   display: flex;
   justify-content: center;
@@ -343,7 +347,6 @@ nav {
   margin-top: 3rem;
 }
 
-/* Remove picture space */
 #about .section__pic-container {
   display: none;
 }
@@ -405,6 +408,45 @@ nav {
 .arrow:hover {
   transform: translateY(5px);
 }
+/* Personal Interests */
+.interests-container {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.interests-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #815cc0, #5a89e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.8rem;
+}
+
+.interest-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.interest-icon {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
 
 /* EXPERIENCE SECTION */
 #experience {
