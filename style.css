@@ -107,3 +107,119 @@ nav {
     display: flex;
   }
 }
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 6rem 10%;
+  height: 90vh;
+  background: linear-gradient(135deg, #f9f9f9, #eef3ff);
+  border-radius: 1rem;
+}
+
+/* Profile Picture */
+.section__pic-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.section__pic-container img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #0077ff;
+  box-shadow: 0 10px 25px rgba(0, 119, 255, 0.25);
+  transition: transform 0.3s ease;
+}
+.section__pic-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Text Content */
+.section__text {
+  flex: 1;
+  text-align: left;
+}
+.section__text__p1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0.5rem 0;
+}
+.section__text__p2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn {
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: #0077ff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #005fd1;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+}
+.btn-outline:hover {
+  background: #0077ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Socials */
+#socials-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+.social-btn:hover {
+  transform: translateY(-3px);
+  background: #0077ff;
+}
+.social-btn:hover img {
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
