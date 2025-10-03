@@ -107,6 +107,7 @@ nav {
     display: flex;
   }
 }
+
 /* PROFILE SECTION */
 #profile {
   display: flex;
@@ -117,6 +118,7 @@ nav {
   height: 90vh;
   background: linear-gradient(135deg, #f9f9f9, #eef3ff);
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 /* Profile Picture */
@@ -124,6 +126,7 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: fadeInLeft 1s ease forwards;
 }
 .section__pic-container img {
   width: 320px;
@@ -142,6 +145,9 @@ nav {
 .section__text {
   flex: 1;
   text-align: left;
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 0.3s;
 }
 .section__text__p1 {
   font-size: 1.1rem;
@@ -220,6 +226,103 @@ nav {
   background: #0077ff;
 }
 .social-btn:hover img {
-  filter: brightness(0) invert(1); /* makes icons white */
+  filter: brightness(0) invert(1);
 }
 
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Profile Section */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+    animation: fadeInDown 1s ease forwards;
+  }
+
+  .section__pic-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section__text {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .section__text__p2 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  #socials-container {
+    justify-content: center;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
