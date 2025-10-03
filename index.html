@@ -25,7 +25,7 @@
             <span></span>
         </div>
     </nav>
-    <section id="profile">
+<section id="profile">
   <div class="section__pic-container">
     <img src="./assets/profile-pic.jpg" alt="Profile picture of me" />
   </div>
@@ -33,14 +33,14 @@
     <p class="section__text__p1">Hi there 👋, I’m</p>
     <h1 class="title">Sania Ezzati</h1>
     <p class="section__text__p2">Crafting modern & user-friendly web experiences</p>
+    
+    <!-- Removed Download CV from here -->
     <div class="btn-container">
-      <button class="btn btn-primary" onclick="window.open('./assets/resume-example.pdf')">
-        📄 Download CV
-      </button>
       <button class="btn btn-outline" onclick="location.href='./#contact'">
         ✉️ Contact Me
       </button>
     </div>
+
     <div id="socials-container">
       <a href="https://www.linkedin.com/in/sania-ezzati-7bb91a206/" target="_blank" class="social-btn">
         <img src="./assets/linkedin.png" alt="LinkedIn" />
@@ -51,6 +51,62 @@
     </div>
   </div>
 </section>
+
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+
+  <div class="section-container about-layout">
+
+    <div class="about-details-container">
+      <div class="about-cards">
+        <div class="about-card">
+          <img
+            src="./assets/experience.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <h3>Experience</h3>
+          <p>1+ years <br />Frontend Development <br /> and Backend Intern</p>
+        </div>
+
+        <div class="about-card">
+          <img
+            src="./assets/education.png"
+            alt="Education icon"
+            class="icon"
+          />
+          <h3>Education</h3>
+          <p>B.Sc. Bachelors Degree<br />in Computer Science <br />(currently studying)</p>
+        </div>
+      </div>
+
+      <div class="text-container">
+        <p>
+          I’m passionate about crafting beautiful, responsive web experiences.  
+          Over the past 1+ years, I’ve focused on modern frontend development,  
+          while also expanding my knowledge in backend and design principles.  
+          I’m always eager to learn and take on new challenges.
+        </p>
+      </div>
+
+      <div class="btn-container" style="margin-top:2rem;">
+        <button class="btn btn-primary" onclick="window.open('./assets/resume-example.pdf')">
+          📄 Download CV
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#experience'"
+  />
+</section>
+
+
     <script src="script.js"></script>
 </body>
 </html>
