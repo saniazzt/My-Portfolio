@@ -482,29 +482,21 @@ nav {
 /* Arrow */
 .arrow {
   position: absolute;
-  right: -3rem;
-  bottom: 2rem;
+  right: 2rem;   /* keep it inside */
+  bottom: 2rem;  /* small padding from bottom */
   cursor: pointer;
+  width: 40px;
   transition: transform 0.3s ease;
 }
 .arrow:hover {
   transform: translateY(5px);
 }
 
-/* Responsive */
+/* Mobile fix */
 @media (max-width: 768px) {
-  #experience {
-    padding: 4rem 5%;
-  }
-  .experience-category {
-    padding: 1.5rem;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
   .arrow {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: -3rem;
+    right: 50%;                /* center horizontally */
+    transform: translateX(50%); 
+    bottom: 1rem;              /* a bit above bottom */
   }
 }
